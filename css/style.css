@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Federant&display=swap');
+
+:root{
+    --text: #080d08;
+    --background: #f4f8f4;
+    --primary: #70a875;
+    --secondary: #a0c5b2;
+    --accent: #85b4a2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    font-family: "Federant", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: var(--background);
+    height: 100vh;
+    width: 100%;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.left-card, .right-card{
+    height: 85vh;
+    border-radius: 15px;
+    transition: box-shadow 0.5s;
+}
+.left-card:hover, .right-card:hover{
+    box-shadow: 5px 5px 15px 5px var(--accent);
+}
+
+.left-card{
+    width: 25%;
+    background-color: var(--primary);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.right-card{
+    width: 65%;
+    background-color: var(--secondary);
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+h1{font-size: 4rem;}
+h2{font-size: 3rem;}
+h3{font-size: 2rem}
+
+.left-card h3{
+    padding: 0.5rem;
+    text-decoration: underline;
+}
+
+.left-card img{
+    display: block;
+    margin: auto;
+}
+
+select{
+    background-color: var(--accent);
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+form{
+    text-align: center;
+
+}
+
+.wrapper{
+    margin-top: auto;
+
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+#submit{
+    width: 85%;
+
+    font-size: 3rem;
+    padding: 0.5rem;
+    background-color: var(--accent);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: minmax(150px, 1fr);
+
+    height: 70vh;
+    padding: 2rem;
+
+    overflow-y: scroll
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reset{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+.win-screen{
+    position: absolute;
+
+    top: 25vh;
+    left: 12.5vw;
+    z-index: 1;
+
+    background-color: rgba(150,150,105,0.8);
+    border-radius: 4rem;
+    border: 8px solid rgba(150,150,105,1);
+
+    height: 50vh;
+    width: 75vw;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+
+    visibility: visible;
+}
+
+.win-screen p{
+    font-size: 2rem;
+}
+
+.win-screen h1{
+    font-weight: bold;
+}
+
+.play-again{
+    padding: 1rem;
+    background-color: var(--accent);
+}
